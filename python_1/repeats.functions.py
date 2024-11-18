@@ -25,8 +25,19 @@ def divideNumbers(firstNumber, secondNumber):
         print("Error: Division by zero is not allowed.")
 
 def main():  # This is the main program
+    allFeatures = ["Addtiion", "Subtratction", "Division", "Multiplication", "Module"]
+
+    print ("Here are the features in the application")
+    # Start loop 
+    # for currentFeature in allFeatures:
+    #     print(currentFeature)
+
+    # Advanced loop
+    for currentFeatureIndex in range ( len(allFeatures) ):
+        print( str( currentFeatureIndex + 1 ) + ". " + allFeatures[ currentFeatureIndex ] )
+
     # 1. Display the menu to the user 
-    displayMenu()
+    # displayMenu() 
     userOption = int(input("Please select an option: "))
 
     # Getting numbers from the user and converting to integers
