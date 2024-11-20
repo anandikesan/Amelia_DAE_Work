@@ -1,4 +1,4 @@
-def displayMenu():
+def displayMenu(): #This displays the menu
     print("Welcome to my calculator.")
     print("1. Addition")
     print("2. Subtraction")
