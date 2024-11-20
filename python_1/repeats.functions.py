@@ -5,26 +5,26 @@ def displayMenu():
     print("3. Multiplication")
     print("4. Division")
 
-def addNumbers(firstNumber, secondNumber):
+def addNumbers(firstNumber, secondNumber):#function for addition & displaying it
     sum = firstNumber + secondNumber
     print("The sum of", firstNumber, "and", secondNumber, "is", sum)
 
-def subtractNumbers(firstNumber, secondNumber):
+def subtractNumbers(firstNumber, secondNumber): #function for subtraction and displaying it
     difference = firstNumber - secondNumber
     print("The difference of", firstNumber, "and", secondNumber, "is", difference)
 
-def multiplyNumbers(firstNumber, secondNumber):
+def multiplyNumbers(firstNumber, secondNumber):#function for multiplying and displaying it
     product = firstNumber * secondNumber
     print("The product of", firstNumber, "and", secondNumber, "is", product)
 
-def divideNumbers(firstNumber, secondNumber):
+def divideNumbers(firstNumber, secondNumber): #function for dividing and displaying it
     if secondNumber != 0:  # To prevent division by zero
         quotient = firstNumber / secondNumber
         print("The quotient of", firstNumber, "and", secondNumber, "is", quotient)
     else:
         print("Error: Division by zero is not allowed.")
 
-def main():  # This is the main program
+def main():  # This is the main program 
     allFeatures = ["Addtiion", "Subtratction", "Division", "Multiplication", "Module"]
 
     print ("Here are the features in the application")
