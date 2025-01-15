@@ -1,0 +1,29 @@
+h1 {
+    color: yellow;
+}
+
+p {
+    width: 110%;
+    color: yellow;
+    color: #f9f651;
+    line-height: 2.0;
+    padding: 20px 20px 20px 20px;
+    margin-top: 15px;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    margin-left: 15px;
+    font-size: 20px;
+    /* // <uniquifier>: Use a unique and descriptive class name
+    // <weight>: Use a value from 400 to 900 */
+}
+.playfair-display {
+  font-family: Playfair Display, serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
+
+body
+{
+    background-color: navy;
+}
