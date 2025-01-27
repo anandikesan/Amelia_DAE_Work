@@ -1,29 +1,108 @@
+* {
+    margin: 0;
+    padding :0;
+}
+
+
 h1 {
     color: yellow;
 }
 
+header {
+    padding-top: 60px;
+}
+
+nav {
+    background-color: lightblue;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+header img{
+    display: block;
+    margin: 0 auto;
+    max-width: 100%
+}
 p {
-    width: 110%;
-    color: yellow;
+    width: 100%;
     color: #f9f651;
     line-height: 2.0;
-    padding: 20px 20px 20px 20px;
-    margin-top: 15px;
-    margin-right: 15px;
-    margin-bottom: 15px;
-    margin-left: 15px;
+    padding: 20px;
+    margin: 15px;
     font-size: 20px;
-    /* // <uniquifier>: Use a unique and descriptive class name
-    // <weight>: Use a value from 400 to 900 */
+    
 }
 .playfair-display {
   font-family: Playfair Display, serif;
   font-optical-sizing: auto;
-  font-weight: weight;
+  font-weight: 400;
   font-style: normal;
 }
 
 body
 {
     background-color: lightblue;
+    text-align: center;
+}
+.planner {
+    width: 200px;
+    height: auto;
+}
+
+article {
+    color: #f9f651;
+    padding: 20px;
+    font-size: 18px;
+}
+
+div {
+    color: #f9f651;
+    background-color:#066990 ;
+    font-size: 20px;
+}
+
+button {
+    font-size:10px;
+    padding: 15px 30px;
+    background-color: #f9f651;
+    color: navy
+}
+
+input[type="text"] {
+    width: 300px;
+    height: 30px;
+    font-size: 11px;
+    padding: 10px;
+}
+
+input[type="email"] {
+    width: 300px;
+    height: 30px;
+    font-size: 11px;
+    padding: 10px;
+}
+
+input[type="password"] {
+    width: 300px;
+    height: 30px;
+    font-size: 11px;
+    padding: 10px;
+}
+
+a {
+    font-size:20px;
+    padding: 15px 30px;
+}
+
+
+footer {
+    text-align: left;
+    padding-left: 20px;
 }
