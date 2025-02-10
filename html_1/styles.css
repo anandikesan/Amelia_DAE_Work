@@ -54,6 +54,10 @@ body
 .planner {
     width: 200px;
     height: auto;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
 }
 
 article {
@@ -99,6 +103,24 @@ input[type="password"] {
 a {
     font-size:20px;
     padding: 15px 30px;
+}
+
+.star {
+    width: 50px;
+    height: 50px;
+    position: relative;
+    top: 200px;
+    left: 50%;
+    transform: translateX(-50%)
+}
+
+.star1 {
+    width: 50px;
+    height: 50px;
+    position: relative;
+    top: 200px;
+    right: 50%;
+    transform: translateX(-50%)
 }
 
 
