@@ -1,14 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+
+body {
+    font-family: 'Playfair Display', serif;
+}
+
+.playfair-display {
+    font-family: Playfair Display, serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
 * {
     margin: 0;
     padding :0;
 }
 
+h1, p, div, button, header, nav, ul, li, input {
+    font-family: 'Playfair Display', serif;
+}
 
 h1 {
     color: yellow;
 }
 
+.features-list { 
+    font-family: 'Playfair Display', serif; 
+}
+
+
 header {
+    font-family: 'Playfair Display', serif;
     padding-top: 60px;
 }
 
@@ -128,9 +150,8 @@ a {
 }
 
 .todo-container {
-    background: white;
     padding: 20px;
-    box-shadow: 0 0 10px rbga (0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     width: 300px;
     text-align: center;
@@ -147,15 +168,6 @@ input {
     padding: 8px;
     border: 1px solid #fffc41;
     border-radius: 5px;
-}
-
-button {
-    padding: 8px 15px;
-    border: none;
-    background: #b4ddfa;
-    color: white;
-    border-radius: 5px;
-    cursor: pointer;
 }
 
 button:hover {
@@ -175,7 +187,6 @@ li.completed {
 
 .delete-btn {
     background: blue;
-    color: white;
     border: none;
     padding: 5px;
     border-radius: 5px;
@@ -188,3 +199,63 @@ footer {
     padding-left: 20px;
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.calendar {
+    width: 350px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header button {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 5px 10px;
+}
+
+.weekdays {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    margin-top: 10px;
+}
+
+.day {
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.today {
+    background: #007bff;
+    font-weight: bold;
+}
+
+footer {
+    width: 100%;
+    text-align: center;  /* or left if you prefer */
+    position: relative;  /* Change to fixed if you want it at the bottom */
+    bottom: 0;
+    padding: 10px;
+}
