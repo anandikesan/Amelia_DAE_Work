@@ -1,7 +1,9 @@
 alert("Welcome to My Academic Planner! Click the close button to continue");
 
 let developmentStartYear=2024
+let currentYear=2025
 console.log('Development started in', developmentStartYear);
+console.log('How many years it has been since we started development:', currentYear - developmentStartYear)
 if(developmentStartYear>=2025){
     console.log('Going strong since 2024')
 }
@@ -19,6 +21,8 @@ let numberOfFounders=1
 let numberOfEmployees=0
 let sum = numberOfEmployees + numberOfFounders
     console.log('Number of employees', sum)
+
+
 
 document.addEventListener("DOMContentLoaded", loadTasks);
 
