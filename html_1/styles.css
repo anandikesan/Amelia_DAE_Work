@@ -259,3 +259,52 @@ footer {
     bottom: 0;
     padding: 10px;
 }
+
+/* Styling for the entry field container */
+.entry-container {
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    width: 100%; /* Makes the container wider */
+    max-width: 600px; /* Prevents it from getting too wide */
+    text-align: center;
+    background-color: #04307b5d;
+    margin: 20px auto; /* Centers the box */
+}
+
+/* Making the textarea bigger and allowing vertical resizing */
+textarea {
+    width: 300%;
+    height: 600px; /* Adjust height to make it tall */
+    font-size: 16px; /* Make text bigger */
+    padding: 15px;
+    border: 2px solid #fffc41;
+    border-radius: 5px;
+    background-color: #04307b5d;
+    color: #f9f651;
+    resize: vertical; /* Allows users to adjust the height */
+}
+
+/* Matching button style */
+button {
+    font-size: 14px;
+    padding: 15px 30px;
+    background-color: #f9f651;
+    color: navy;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+button:hover {
+    background: #2770a4;
+}
+
+/* Output text styling */
+#output {
+    color: #f9f651;
+    font-size: 20px;
+    padding: 10px;
+}
+
