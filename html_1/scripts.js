@@ -22,3 +22,5 @@ let numberOfFounders = 1;
 let numberOfEmployees = 0;
 let sum = numberOfEmployees + numberOfFounders;
 console.log('Number of employees', sum);
+
+
