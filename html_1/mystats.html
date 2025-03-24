@@ -2,15 +2,13 @@
     <head>
         <meta charset="UTF-8">
         <title>My Academic Planner</title>
-        <link href="/Users/sa20/Desktop/Amelia's DAE Work/css_1/mystats.css" rel="stylesheet">
+        <link href="mystats.css" rel="stylesheet">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
     </head>
 
     <body>
-        <img src="My Academic Planner.png" alt="My Academic Planner">
-        <h1 id="planner-title">My Academic Planner</h1>
         <nav aria-label="Main Navigation">
             <ul>
                 <li><a href="project.html">Home</a></li>
@@ -21,20 +19,26 @@
                 <li><a href="personalgoals.html">Personal Goals</a></li>
             </ul>  
         </nav>
-        <div class="entry-container">
-            <h2>Academics</h2>
-            <label for="entryBox">Enter text:</label>
-            <textarea id="entryBox" placeholder="Type here..."></textarea>
-            <p id="output"></p>
+
+        <h1 id="planner-title">My Stats</h1>
+
+        <div class="stats-container">
+            <div class="entry-container courses-container">
+                <h2>Courses</h2>
+                <textarea placeholder="Enter your courses..."></textarea>
+            </div>
+
+            <div class="entry-container grades-container">
+                <h2>Grades</h2>
+                <textarea placeholder="Enter your grades..."></textarea>
+            </div>
+
+            <div class="entry-container extracurriculars-container">
+                <h2>Extracurriculars</h2>
+                <textarea placeholder="Enter your extracurriculars..."></textarea>
+            </div>
         </div>
 
-        <div class="entry-container">
-            <h2>Extracurriculars</h2>
-            <label for="entryBox">Enter text:</label>
-            <textarea id="entryBox" placeholder="Type here..."></textarea>
-            <p id="output"></p>
-        </div>
-
-        <script src="mystats.js"></script> <!-- Fixed script tag -->
+        <script src="mystats.js"></script>
     </body>
 </html>

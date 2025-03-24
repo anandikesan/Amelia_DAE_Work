@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+
+body {
+    background-color: #0c1b41; /* Navy blue background */
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navigation Bar */
+nav {
+    background-color: #0c1b41;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around; /* Spaced out navbar items */
+    padding: 10px 0;
+    width: 100%;
+}
+
+nav li {
+    margin: 0 20px; /* Adds spacing between nav items */
+}
+
+nav a {
+    color: #fffc41;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* Centered title for My Stats */
+#planner-title {
+    color: #f9f651;
+    text-align: center;
+    margin: 100px 0 50px 0;
+    font-size: 48px;
+}
+
+/* Container for all entry sections */
+.stats-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 30px;
+    padding: 0 50px;
+}
+
+/* Individual entry containers */
+.entry-container {
+    flex: 1;
+    height: 500px;
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    color: black;
+}
+
+/* Specific color variations */
+.courses-container {
+    background: linear-gradient(to bottom right, #a0b4d5, #7a8ea3);
+}
+
+.grades-container {
+    background: linear-gradient(to bottom right, #d5a0c4, #a3728e);
+}
+
+.extracurriculars-container {
+    background: linear-gradient(to bottom right, #a0d5b4, #728ea3);
+}
+
+/* Heading styles */
+.entry-container h2 {
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+/* Textarea styles */
+.entry-container textarea {
+    flex-grow: 1;
+    width: 100%;
+    background: transparent;
+    border: none;
+    resize: none;
+    color: white;
+    font-family: 'Playfair Display', serif;
+    font-size: 16px;
+    outline: none;
+}
+
+/* List styles for Extracurriculars */
+.entry-container ul {
+    list-style-type: none;
+    text-align: left;
+    color: white;
+}
