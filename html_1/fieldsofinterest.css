@@ -63,14 +63,21 @@ body {
     min-height: 100vh;
 }
 
+html, body {
+    background-color: #0c1b41 !important;
+    height: 100%;
+}
+
+
 .container {
     display: flex;
-    flex-direction: column;
-    gap: 30px;
-    width: 80%; /* Take up 80% of the page width */
+    flex-direction: column; /* Stack items vertically */
+    gap: 30px; /* Keep space between boxes */
+    width: 80%; /* Adjust width as needed */
     max-width: 1200px;
     margin: 0 auto; /* Center the container */
 }
+
 
 .interest-box {
     display: flex;
@@ -79,7 +86,9 @@ body {
     border-radius: 15px;
     position: relative;
     overflow: hidden;
+    justify-content: space-between;
 }
+
 
 .content {
     z-index: 2;
@@ -97,12 +106,12 @@ body {
 
 .neuroscience {
     background: linear-gradient(to right, #5a6bc4, #8a5294);
-    color: white;
+
 }
 
 .astrophysics {
     background: linear-gradient(to right, #4ca3a3, #2c6e8f);
-    color: white;
+    
 }
 
 h2 {
@@ -125,7 +134,6 @@ textarea {
     background-color: rgba(255, 255, 255, 0.2);
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 10px;
-    color: white;
     padding: 15px;
     font-family: 'Inter', sans-serif;
     font-size: 0.9rem;

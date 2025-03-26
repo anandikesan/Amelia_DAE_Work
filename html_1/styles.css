@@ -307,3 +307,10 @@ button:hover {
     font-size: 20px;
     padding: 10px;
 }
+
+.card-img-top {
+    width: 200px;
+    height: 200px;
+  }
+  
+  

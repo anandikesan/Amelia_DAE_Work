@@ -259,3 +259,9 @@ footer {
     bottom: 0;
     padding: 10px;
 }
+
+.card-img-top {
+    width: 100px;
+    height: 100px;
+  }
+  
