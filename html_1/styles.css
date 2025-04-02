@@ -312,5 +312,85 @@ button:hover {
     width: 200px;
     height: 200px;
   }
+
+  .card-img-2 {
+    width: 200px;
+    height: 200px;
+  }
+
+  .card-img-3 {
+    width: 200px;
+    height: 200px;
+  }
+
+  .card-img-4 {
+    width: 200px;
+    height: 200px;
+  }
+
+  .card-img-5 {
+    width: 200px;
+    height: 200px;
+  }
+
+  .card-img-6 {
+    width: 200px;
+    height: 200px;
+  }
+
+  .cards-container {
+    display: flex;
+    justify-content: center;  /* Centers all cards */
+    gap: 20px;  /* Space between cards */
+    flex-wrap: wrap;  /* Allows wrapping on smaller screens */
+    padding: 20px;
+}
+
+.card {
+    background: #04307b5d;
+    color: #f9f651;
+    border-radius: 10px;
+    width: 250px; /* Adjust width */
+    padding: 15px;
+    text-align: center;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.card-body {
+    padding: 10px;
+}
+
   
+  .todo-container {
+    background-color: #04307b; /* Adjust this color */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.to-do-container h2, 
+.to-do-container ul, 
+.to-do-container input, 
+.to-do-container button {
+    font-family: 'Playfair Display', serif;
+}
+
+button {
+    font-size: 14px !important;
+    padding: 15px 30px !important;
+    background-color: #f9f651 !important;
+    color: navy !important;
+}
+
+.input-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
   
