@@ -1,38 +1,46 @@
+<!DOCTYPE html>
 <html lang="en">
-    <head>
-      <meta charset="UTF-8">
-      <title>My Academic Planner</title>
-       <link href="fieldsofinterest.css" rel="stylesheet">
-       <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>College Cards</title>
+  <link rel="stylesheet" href="colleges.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
 
-       
-    </head>
-    <body>
-        <div class="container">
-            <div class="interest-box neuroscience">
-                <div class="content">
-                    <h2>Neuroscience</h2>
-                    <p>The study of the nervous system</p>
-                    <button type="button" class="neuro-button">More Info</button>
-                </div>
-                <div class="additional-info">
-                    <textarea placeholder="Insert Additional Information"></textarea>
-                </div>
-            </div>
-        
-            <div class="interest-box astrophysics">
-                <div class="content">
-                    <h2>Astrophysics</h2>
-                    <p>The scientific study of our universe and our place in it</p>
-                    <button type="button" class="astro-button">More Info</button>
-                </div>
-                <div class="additional-info">
-                    <textarea placeholder="Insert Additional Information"></textarea>
-                </div>
-            </div>
-        </div>
-        
-    </html>
+</head>
+<body>
+  <div class="grid">
+    <div class="card yale" onclick="openModal('Yale')">
+      Yale<br><span>Click for more</span>
+      <div class="info" id="info-Yale"></div>
+    </div>
+    <div class="card nyu" onclick="openModal('NYU')">
+      NYU<br><span>Click for more</span>
+      <div class="info" id="info-NYU"></div>
+    </div>
+    <div class="card usc" onclick="openModal('USC')">
+      USC<br><span>Click for more</span>
+      <div class="info" id="info-USC"></div>
+    </div>
+    <div class="card dartmouth" onclick="openModal('Dartmouth')">
+      Dartmouth<br><span>Click for more</span>
+      <div class="info" id="info-Dartmouth"></div>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal" id="modal">
+    <div class="modal-content">
+      <h3 id="modal-title"></h3>
+      <textarea id="modal-input" placeholder="Enter info..."></textarea>
+      <br>
+      <button onclick="saveInfo()">Save</button>
+      <button onclick="closeModal()">Cancel</button>
+    </div>
+  </div>
+  <button id="add-button">+ Add a New School</button>
+
+
+  <script src="colleges.js"></script>
+</body>
+</html>
