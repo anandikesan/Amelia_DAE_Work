@@ -6,35 +6,80 @@
        <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 
-       
-    </head>
-    <body>
-        <div class="container">
-            <div class="interest-box neuroscience">
-                <div class="content">
-                    <h2>Neuroscience</h2>
-                    <p>The study of the nervous system</p>
-                    <button type="button" class="neuro-button">More Info</button>
-                </div>
-                <div class="additional-info">
-                    <textarea placeholder="Insert Additional Information"></textarea>
-                </div>
-            </div>
+
+<body>
+    <header>
+            <img src="My Academic Planner.png" alt="My Academic Planner">
+            <h1 id="planner-title">Fields of Interest</h1>
+            <nav aria-label="Main Navigation">
+                <ul>
+                  <li><a href="project.html">Home</a></li>
+                  <li><a href="calendar.html">To Do/Calendar</a></li>
+                  <li><a href="mystats.html">My Stats</a></li>
+                  <li><a href="fieldsofinterest.html">Fields Of Interest</a></li>
+                  <li><a href="colleges.html">Colleges</a></li>
+                  <li><a href="personalgoals.html">Personal Goals</a></li>
+                </ul>  
+              </nav>
+        </header>
+        <main>
+    <div class="container" id="cardsContainer">
+        <div class="card card-astrophysics" onclick="openModal('Astrophysics')">
+            <div>Astrophysics</div>
+            <div class="card-info">Click for more</div>
+        </div>
+        <div class="card card-neuroscience" onclick="openModal('Neuroscience')">
+            <div>Neuroscience</div>
+            <div class="card-info">Click for more</div>
+        </div>
+        <div class="card card-journalism" onclick="openModal('Journalism')">
+            <div>Journalism</div>
+            <div class="card-info">Click for more</div>
+        </div>
+        <div class="card card-computer-science" onclick="openModal('Computer Science')">
+            <div>Computer Science</div>
+            <div class="card-info">Click for more</div>
+        </div>
+    </div>
+    <button class="add-button" onclick="showNewCardForm()">+ Add a New Field</button>
+
+    <div id="newCardForm">
+        <h2>Add New Field of Interest</h2>
+        <label for="newFieldName">Field Name:</label>
+        <input type="text" id="newFieldName" placeholder="Enter field name">
         
-            <div class="interest-box astrophysics">
-                <div class="content">
-                    <h2>Astrophysics</h2>
-                    <p>The scientific study of our universe and our place in it</p>
-                    <button type="button" class="astro-button">More Info</button>
-                </div>
-                <div class="additional-info">
-                    <textarea placeholder="Insert Additional Information"></textarea>
-                </div>
-            </div>
-            <button id="add-button">+ Add a New School</button>
-
+        <label>Select Color:</label>
+        <div class="color-options">
+            <div class="color-option color-pink selected" onclick="selectColor('pink', this)"></div>
+            <div class="color-option color-green" onclick="selectColor('green', this)"></div>
+            <div class="color-option color-yellow" onclick="selectColor('yellow', this)"></div>
+            <div class="color-option color-blue" onclick="selectColor('blue', this)"></div>
         </div>
         
-    </html>
+        <div class="form-buttons">
+            <button class="cancel-button" onclick="hideNewCardForm()">Cancel</button>
+            <button class="save-button" onclick="addNewCard()">Add Field</button>
+        </div>
+    </div>
+
+    <div id="interestModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2 id="modalTitle">Field Details</h2>
+            
+            <label for="interestDescription">Description:</label>
+            <textarea id="interestDescription" placeholder="Add a description about this field..."></textarea>
+            
+            <label for="interestResources">Key Resources:</label>
+            <textarea id="interestResources" placeholder="Add helpful resources, links, or notes..."></textarea>
+            
+            <label for="interestImportance">Why I'm interested:</label>
+            <textarea id="interestImportance" placeholder="Explain why this field interests you..."></textarea>
+            
+            <button class="save-button" onclick="saveInterestInfo()">Save Information</button>
+        </div>
+        <main>
+        <script src="fieldsofinterest.js"></script>
+
+    </div>

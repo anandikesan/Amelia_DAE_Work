@@ -1,4 +1,4 @@
-let selectedColor = 'yale';
+let selectedColor = 'pink';
         
 function openModal(fieldName) {
     document.getElementById('modalTitle').textContent = fieldName;
@@ -24,11 +24,10 @@ function hideNewCardForm() {
 
 function selectColor(color, element) {
     selectedColor = color;
-
+    
     document.querySelectorAll('.color-option').forEach(option => {
         option.classList.remove('selected');
     });
-
     element.classList.add('selected');
 }
 

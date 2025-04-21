@@ -9,38 +9,60 @@
 
 </head>
 <body>
-  <div class="grid">
-    <div class="card yale" onclick="openModal('Yale')">
-      Yale<br><span>Click for more</span>
-      <div class="info" id="info-Yale"></div>
+    <div class="container" id="cardsContainer">
+        <div class="card card-yale" onclick="openModal('Yale')">
+            <div>Yale</div>
+            <div class="card-info">Click for more</div>
+        </div>
+        <div class="card card-nyu" onclick="openModal('NYU')">
+            <div>NYU</div>
+            <div class="card-info">Click for more</div>
+        </div>
+        <div class="card card-usc" onclick="openModal('USC')">
+            <div>USC</div>
+            <div class="card-info">Click for more</div>
+        </div>
+        <div class="card card-dartmouth" onclick="openModal('Dartmouth')">
+            <div>Dartmouth</div>
+            <div class="card-info">Click for more</div>
+        </div>
     </div>
-    <div class="card nyu" onclick="openModal('NYU')">
-      NYU<br><span>Click for more</span>
-      <div class="info" id="info-NYU"></div>
-    </div>
-    <div class="card usc" onclick="openModal('USC')">
-      USC<br><span>Click for more</span>
-      <div class="info" id="info-USC"></div>
-    </div>
-    <div class="card dartmouth" onclick="openModal('Dartmouth')">
-      Dartmouth<br><span>Click for more</span>
-      <div class="info" id="info-Dartmouth"></div>
-    </div>
-  </div>
 
-  <!-- Modal -->
-  <div class="modal" id="modal">
-    <div class="modal-content">
-      <h3 id="modal-title"></h3>
-      <textarea id="modal-input" placeholder="Enter info..."></textarea>
-      <br>
-      <button onclick="saveInfo()">Save</button>
-      <button onclick="closeModal()">Cancel</button>
+    <button class="add-button" onclick="showNewCardForm()">+ Add a New School</button>
+
+    <div id="newCardForm">
+        <h2>Add New College</h2>
+        <label for="newFieldName">College Name:</label>
+        <input type="text" id="newFieldName" placeholder="Enter college name">
+        
+        <label>Select Color:</label>
+        <div class="color-options">
+            <div class="color-option color-yale selected" onclick="selectColor('yale', this)"></div>
+            <div class="color-option color-nyu" onclick="selectColor('nyu', this)"></div>
+            <div class="color-option color-usc" onclick="selectColor('usc', this)"></div>
+            <div class="color-option color-dartmouth" onclick="selectColor('dartmouth', this)"></div>
+        </div>
+        
+        <div class="form-buttons">
+            <button class="cancel-button" onclick="hideNewCardForm()">Cancel</button>
+            <button class="save-button" onclick="addNewCard()">Add College</button>
+        </div>
     </div>
-  </div>
-  <button id="add-button">+ Add a New School</button>
 
-
-  <script src="colleges.js"></script>
-</body>
-</html>
+    <div id="interestModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2 id="modalTitle">College Details</h2>
+            
+            <label for="interestDescription">About:</label>
+            <textarea id="interestDescription" placeholder="Add information about this college..."></textarea>
+            
+            <label for="interestResources">Application Requirements:</label>
+            <textarea id="interestResources" placeholder="Add application deadlines, requirements, etc..."></textarea>
+            
+            <label for="interestImportance">Why I'm interested:</label>
+            <textarea id="interestImportance" placeholder="Explain why you're interested in this college..."></textarea>
+            
+            <button class="save-button" onclick="saveInterestInfo()">Save Information</button>
+        </div>
+    </div>
