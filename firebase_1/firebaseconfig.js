@@ -1,31 +1,28 @@
-// Import the functions you need from the SDKs you need
-
-import { initializeApp } from "firebase/app";
-
-// TODO: Add SDKs for Firebase products that you want to use
-
-// https://firebase.google.com/docs/web/setup#available-libraries
 
 
-// Your web app's Firebase configuration
+import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.x.x/firebase-app.js';
+import { getFirestore, collection, getDocs } from 'https://www.gstatic.com/firebasejs/10.x.x/firebase-firestore.js';
 
 const firebaseConfig = {
-
-  apiKey: "AIzaSyA3yi8zC1bpx9WGnQtIxtmH_HWvBJsqHJY",
-
-  authDomain: "my-academic-planner-91526.firebaseapp.com",
-
-  projectId: "my-academic-planner-91526",
-
-  storageBucket: "my-academic-planner-91526.firebasestorage.app",
-
-  messagingSenderId: "212759027745",
-
-  appId: "1:212759027745:web:26f6e1b0d7f26054f74360"
-
+  apiKey: "YOUR_API_KEY",
+  authDomain: "YOUR_PROJECT.firebaseapp.com",
+  projectId: "YOUR_PROJECT_ID",
+  storageBucket: "YOUR_PROJECT.appspot.com",
+  messagingSenderId: "SENDER_ID",
+  appId: "APP_ID"
 };
 
-
-// Initialize Firebase
-
 const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+
+// Function to load data from a collection
+window.loadData = async function () {
+  const querySnapshot = await getDocs(collection(db, "myCollection"));
+  const output = document.getElementById("output");
+  output.innerHTML = ""; // clear existing items
+  querySnapshot.forEach((doc) => {
+    const li = document.createElement("li");
+    li.textContent = `${doc.id}: ${JSON.stringify(doc.data())}`;
+    output.appendChild(li);
+  });
+};
